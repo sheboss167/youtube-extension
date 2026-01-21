@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Ad Watcher",
+  "version": "1.1",
+  "description": "Highlights the Skip Ad button when it appears on YouTube.",
+  "permissions": ["scripting", "tabs"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
